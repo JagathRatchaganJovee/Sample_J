@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JCI</string>
+    <string name="loader_text">Splash Screen</string>
+    <string name="main_activity_textview1">MainActivity</string>
+</resources>
