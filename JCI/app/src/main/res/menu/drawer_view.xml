@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_homeicon"
+            android:icon="@drawable/ic_menu_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_menu_search"
+            android:title="Search Member" />
+        <item
+            android:id="@+id/nav_loms"
+            android:icon="@drawable/ic_menu_lom"
+            android:title="LOMs" />
+        <item
+            android:id="@+id/nav_zgpmembers"
+            android:icon="@drawable/ic_menu_zgpmember"
+            android:title="ZGB Members" />
+        <item
+            android:id="@+id/nav_business"
+            android:icon="@drawable/ic_menu_business"
+            android:title="Business" />
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/ic_menu_events"
+            android:title="Events" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_menu_help"
+            android:title="Help" />
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_menu_login"
+            android:title="Login" />
+
+    </group>
+</menu>

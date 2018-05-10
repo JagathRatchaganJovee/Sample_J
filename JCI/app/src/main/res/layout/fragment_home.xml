@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:background="@drawable/home_title_style"
+            android:text="@string/main_activity_textview1"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+
+            />
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textview1"
+            android:paddingBottom="10dp">
+
+
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                />
+
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/homeimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:scaleType="center"
+            android:src="@drawable/jcisplash"
+            app:layout_constraintTop_toBottomOf="@id/textview1"
+
+            />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/buttonslayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                android:id="@+id/homebutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/Missionbutton"
+                android:background="@drawable/buttonstyle"
+                android:text="home"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+
+
+                />
+
+            <Button
+                android:id="@+id/Missionbutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/homebutton"
+                app:layout_constraintRight_toLeftOf="@id/foundersbutton"
+                app:layout_constraintHorizontal_weight="1"
+                android:background="@drawable/buttonstylelight"
+                android:text="JCI Mission"
+                android:textColor="#4A1A6F"
+                android:layout_marginEnd="10dp"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/foundersbutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintHorizontal_weight="1"
+                android:background="@drawable/buttonstyle"
+                android:text="Founder's \n Perspectives"
+                app:layout_constraintLeft_toRightOf="@id/Missionbutton"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+
+
+                />
+            <android.support.constraint.Barrier
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/barrier"
+                app:barrierDirection="bottom"
+                android:paddingTop="10dp"
+                app:constraint_referenced_ids="homebutton,Missionbutton,foundersbutton"/>
+
+
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/barrier"
+                android:id="@+id/visionbutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/creedbutton"
+                app:layout_constraintHorizontal_weight="1"
+                android:background="@drawable/buttonstylelight"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="JCI Vision"
+                android:textColor="#4A1A6F"
+                android:textSize="12sp"
+                />
+
+
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/barrier"
+                android:id="@+id/creedbutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/visionbutton"
+                app:layout_constraintRight_toLeftOf="@id/theorybutton"
+                app:layout_constraintHorizontal_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/buttonstyle"
+                android:layout_marginTop="10dp"
+                android:text="JCI Creed"
+                android:textColor="@color/white"
+
+                />
+
+
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/barrier"
+                android:id="@+id/theorybutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintHorizontal_weight="1"
+                android:background="@drawable/buttonstylelight"
+                app:layout_constraintLeft_toRightOf="@id/creedbutton"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="@string/theorylabel"
+                android:layout_marginTop="10dp"
+                android:textColor="#4A1A6F"
+                android:textSize="12sp"
+                />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+   <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    >
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="280dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/buttonstyle"
+            android:gravity="center"
+            android:text="@string/main_activity_textview1"
+            android:textAlignment="gravity"
+            android:textColor="@color/white"
+
+            android:textSize="18sp"
+
+            />
+
+        <ScrollView
+            android:id="@+id/scrolllviewchild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview1">
+
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+        </ScrollView>
+        <ImageView
+            android:id="@+id/homeimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jcisplash"
+            android:layout_below="@id/scrolllviewchild"
+            android:scaleType="center"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/childrelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+
+            <LinearLayout
+                android:id="@+id/first_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/homebutton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonstyle"
+                    android:text="home"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+
+
+                    />
+
+                <Button
+                    android:id="@+id/Missionbutton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="#FAF4FE"
+                    android:text="JCI Mission"
+                    android:textColor="#4A1A6F"
+                    android:textSize="12sp"
+                    />
+
+                <Button
+                    android:id="@+id/foundersbutton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonstyle"
+                    android:gravity="center"
+                    android:text="Founder's \n Perspectives"
+                    android:textSize="12sp"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/white"
+
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/first_row"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/visionbutton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="#FAF4FE"
+                    android:text="JCI Vision"
+                    android:textColor="#4A1A6F"
+                    android:textSize="12sp"
+                    />
+
+
+                <Button
+                    android:id="@+id/creedbutton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonstyle"
+                    android:text="JCI Creed"
+                    android:textColor="@color/white"
+
+                    />
+
+
+                <Button
+                    android:id="@+id/theorybutton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:text="@string/theorylabel"
+                    android:textAlignment="gravity"
+                    android:textColor="#4A1A6F"
+                    android:textSize="12sp"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+-->
+
+</FrameLayout>
